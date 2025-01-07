@@ -1,0 +1,8 @@
+@use '../foundation/variables'as v;
+@use '../foundation/functions'as f;
+
+.l-container {
+  padding: 0 16px;
+  margin: 0 auto;
+  max-width: v.$width-main;
+}

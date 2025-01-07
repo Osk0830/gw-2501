@@ -1,0 +1,15 @@
+@use './variables' as v;
+
+// %に換算
+@function per($target, $base) {
+  @return calc($target / $base * 100%);
+}
+
+// vwに変換
+@function vwSp($target) {
+  @return calc($target / v.$base-width-sp * 100vw);
+}
+
+@function vwPc($target) {
+  @return calc($target / v.$base-width-pc * 100vw);
+}

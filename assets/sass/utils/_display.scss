@@ -1,0 +1,26 @@
+@use '../foundation/variables'as v;
+@use '../foundation/functions'as f;
+
+.u-{
+  &invisible{
+    &Sp{
+      @include v.mq(sp) {
+        display: none;
+      }
+    }
+    &Pc{
+      @include v.mq(pc) {
+        display: none;
+      }
+    }
+  }
+  &flex{
+    display: flex;
+    &--jcsb{
+      justify-content: space-between;
+    }
+    &--aic{
+      align-items: center;
+    }
+  }
+}

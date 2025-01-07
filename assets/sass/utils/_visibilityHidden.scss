@@ -1,0 +1,10 @@
+@use '../foundation/variables'as v;
+@use '../foundation/functions'as f;
+
+.u-visibilityHidden {
+  display: block;
+  overflow: hidden;
+  width: 0;
+  height: 0;
+  white-space: nowrap;
+}

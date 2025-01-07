@@ -1,0 +1,14 @@
+@use '../foundation/variables'as v;
+@use '../foundation/functions'as f;
+
+.u-scrollTarget {
+  @at-root {
+    .u-scrollTarget {
+      scroll-margin-top: 60px;
+
+      @include v.mq(pc) {
+        scroll-margin-top: 90px;
+      }
+    }
+  }
+}
