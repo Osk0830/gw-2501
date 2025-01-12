@@ -25,3 +25,28 @@
     }
   }
 }
+
+body {
+  font-family: v.$font-main;
+  @include v.rem(18);
+  line-height: v.$lh-main;
+}
+
+a {
+  color: v.$color-black;
+  text-decoration: none;
+
+  &:hover,
+  i {
+    transition: all .3s;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
+  list-style: none;
+}
