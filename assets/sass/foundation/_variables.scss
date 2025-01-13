@@ -10,6 +10,15 @@
 $font-main: 'Noto Sans JP', sans-serif;
 $font-point: 'Poppins', sans-serif; //追加_20250113
 
+// Font weight
+$fw-regular: 400; //追加_20250113
+$fw-bold: 700; //追加_20250113
+$fw-extrabold: 800; //追加_20250113
+
+// Font-style
+//$fs-normal: normal; //不要？
+$fs-italic: italic; //追加_20250113
+
 // root Size
 $fz-root: 16;
 $fz-root-px: 16;
@@ -35,15 +44,23 @@ $color-white: #FFF;
 $color-white50: rgba(255, 255, 255, .5);
 $color-black: #000;
 
-$color-main: #000; //追加_20250113
+$color-main: $color-black; //追加_20250113
 $color-sub: #333; //追加_20250113
-$color-point: #46c017; //追加_20250113
-// $color-plane: #;
-// $color-pale: #;
-$color-bg: rgba(0, 121, 242, 0.05); //追加_20250113
 
-$color-pink: #f11f8d; //追加_20250113
-$color-orange: #f26618; //追加_20250113
+$color-blue:#0079f2; //追加_20250113
+$color-yellow:#f2a118; //追加_20250113 
+$color-green:#46c017; //追加_20250113
+$color-orange:#f26618; //追加_20250113
+$color-pink:#f11f8d; //追加_20250113
+$color-gray: #f0f0f0; //追加_20250113
+
+$color-bg-orange: #ffedcc; //追加_20250113
+$color-bg-light_orange: #ffeee5; //追加_20250113
+$color-bg-yellow: #fff6e5; //追加_20250113
+$color-bg-black: #222; //追加_20250113
+
+$color-bg-light_glay: rgba(0, 121, 242, 0.05); //追加_20250113
+
 
 //-----------------------------------
 //Pass
