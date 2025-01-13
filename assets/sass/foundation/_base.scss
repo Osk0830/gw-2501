@@ -30,6 +30,10 @@ body {
   font-family: v.$font-main;
   @include v.rem(18);
   line-height: v.$lh-main;
+
+  @include v.mq(pc) {
+    @include v.rem(20);
+  }
 }
 
 a {
@@ -45,6 +49,7 @@ a {
 img {
   max-width: 100%;
   height: auto;
+  vertical-align: bottom
 }
 
 ul {
