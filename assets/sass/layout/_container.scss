@@ -1,6 +1,28 @@
 @use '../foundation/variables'as v;
 @use '../foundation/functions'as f;
+// den記述--------------------------
+/* 各セクションの左右の余白 */
+.business,
+.works,
+.news,
+.contact {
+  padding: 0 1.25rem;
+}
 
+/* コンテナ */
+.container {
+  padding: 5rem 0;
+  max-width: v.$width-main;
+  margin: auto;
+}
+
+@media (min-width:768px) {
+  .container {
+    padding: 6.25rem 0;
+  }
+}
+
+// サンプル--------------------------
 .l-container {
   padding: 0 16px;
   margin: 0 auto;

@@ -1,7 +1,41 @@
 @use './variables' as v;
 @use './functions' as f;
 
-// 変数やmixinの使い方のサンプルです
+// den記述----------------------------
+body{
+  font-family: v.$font-main;
+  font-weight: 700; //変数？
+  line-height: v.$lh-main;
+  color: v.$color-black;
+}
+
+@include v.mq(pc){
+  @include v.rem(18);
+}
+
+a{
+  color: v.$color-black;
+  text-decoration: none; //変数？
+}
+
+a,
+a:hover,
+a i{
+  transition: all 0.3s; //変数？
+}
+
+img{ //変数？
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+ul{ //変数？
+  list-style: none;
+}
+
+
+// 変数やmixinの使い方のサンプルです----------------------
 .sample {
   font-family: v.$font-main;
   @include v.rem(24);
