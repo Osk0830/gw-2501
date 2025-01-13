@@ -5,4 +5,9 @@
   padding: 80px 16px;//追加250113
   margin: 0 auto;
   max-width: v.$width-main;
+  @include v.mq(pc) {  //追加250113
+    padding-top: 110px;
+    padding-bottom: 95px;
+  }
+
 }
