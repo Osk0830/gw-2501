@@ -8,7 +8,7 @@
 
 // Font Family
 $font-main: 'Noto Sans JP', sans-serif;
-// $font-point: ;
+$font-point: 'Poppins', sans-serif; //追加_20250113
 
 // root Size
 $fz-root: 16;
@@ -35,13 +35,15 @@ $color-white: #FFF;
 $color-white50: rgba(255, 255, 255, .5);
 $color-black: #000;
 
-// $color-main: #;
-// $color-sub: #;
-// $color-point: #;
+$color-main: #000; //追加_20250113
+$color-sub: #333; //追加_20250113
+$color-point: #46c017; //追加_20250113
 // $color-plane: #;
 // $color-pale: #;
-// $color-bg: #;
-;
+$color-bg: rgba(0, 121, 242, 0.05); //追加_20250113
+
+$color-pink: #f11f8d; //追加_20250113
+$color-orange: #f26618; //追加_20250113
 
 //-----------------------------------
 //Pass
