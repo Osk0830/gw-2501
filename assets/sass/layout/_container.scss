@@ -1,30 +1,24 @@
 @use '../foundation/variables'as v;
 @use '../foundation/functions'as f;
 // den記述--------------------------
-/* 各セクションの左右の余白 */
-.business,
-.works,
-.news,
-.contact {
-  padding: 0 1.25rem;
-}
 
 /* コンテナ */
 .container {
-  padding: 5rem 0;
+  padding: 4.3rem 1rem 5rem;
   max-width: v.$width-main;
-  margin: auto;
-}
+  margin-inline: auto; 
 
-@media (min-width:768px) {
-  .container {
-    padding: 6.25rem 0;
+  @include v.mq(pc){
+    max-width: 68.75rem;
+    margin: 0 auto;
+    padding-top: 6rem;
+    padding-bottom: 3rem;
   }
 }
 
 // サンプル--------------------------
-.l-container {
+/*.l-container {
   padding: 0 16px;
   margin: 0 auto;
   max-width: v.$width-main;
-}
+}*/
