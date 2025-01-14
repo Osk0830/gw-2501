@@ -22,7 +22,7 @@ $f-normal: normal;
 $f-italic: italic;
 
 // $font-point: ;
-// 変数「フォントポイント」とは何か？（root sizeとは別？）
+// 変数「font-point」とは何か？（root sizeとは別？）
 
 // そのほかのfontの変数定義について(@mixinを使う)
 @mixin font($family, $weight, $style){
@@ -30,6 +30,7 @@ $f-italic: italic;
   font-weight: $weight;
   font-style: $style;
 }
+
 
 // root Size
 $fz-root: 16;
