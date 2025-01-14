@@ -3,10 +3,10 @@
 
 // den記述----------------------------
 body{
-  font-family: v.$font-main;
+  font-family: v.$f-main;
   font-weight: 700; //変数？
   line-height: v.$lh-main;
-  color: v.$color-black;
+  color: v.$color-main;
 }
 
 @include v.mq(pc){
@@ -21,7 +21,7 @@ a{
 a,
 a:hover,
 a i{
-  transition: all 0.3s; //変数？
+  transition: v.$transition; //変数？
 }
 
 img{ //変数？
