@@ -1,8 +1,42 @@
 @use './variables' as v;
 @use './functions' as f;
 
-// 変数やmixinの使い方のサンプルです
-.sample {
+// den記述----------------------------
+body{
+  font-family: v.$f-main;
+  @include v.rem(16);
+  font-weight: 400;
+  line-height: v.$lh-main;
+  color: v.$c-main;
+
+  @include v.mq(pc){
+    @include v.rem(20);
+  }
+}
+
+a{
+  color: v.$c-white; //白の変数がない？
+  text-decoration: none; 
+
+  &:hover,
+  i{
+    transition: v.$transition;
+  }
+}
+
+img{ 
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+ul{ 
+  list-style: none;
+}
+
+
+// 変数やmixinの使い方のサンプルです----------------------
+/*.sample {
   font-family: v.$font-main;
   @include v.rem(24);
   line-height: v.$lh-main;
@@ -24,4 +58,4 @@
       background: url("#{v.$pass}cover_pc_1.png") no-repeat center center cover;
     }
   }
-}
+}*/

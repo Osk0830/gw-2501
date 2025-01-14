@@ -1,8 +1,24 @@
 @use '../foundation/variables'as v;
 @use '../foundation/functions'as f;
+// den記述--------------------------
 
-.l-container {
+/* コンテナ */
+.container {
+  padding: 4.3rem 1rem 5rem;
+  max-width: v.$width-main;
+  margin-inline: auto; 
+
+  @include v.mq(pc){
+    max-width: 68.75rem;
+    margin: 0 auto;
+    padding-top: 6rem;
+    padding-bottom: 3rem;
+  }
+}
+
+// サンプル--------------------------
+/*.l-container {
   padding: 0 16px;
   margin: 0 auto;
   max-width: v.$width-main;
-}
+}*/
