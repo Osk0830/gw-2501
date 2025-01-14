@@ -4,11 +4,9 @@
 //Font
 //------------------------------------
 
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap');
-
 // Font Family
 $font-main: 'Noto Sans JP', sans-serif;
-$font-point: 'Poppins', sans-serif; //追加_20250113
+$font-point: 'Poppins', sans-serif; 
 
 // root Size
 $fz-root: 16;
@@ -31,19 +29,24 @@ $lh-main: 1.75;
 //-----------------------------------
 //Color
 //-----------------------------------
-$color-white: #FFF;
-$color-white50: rgba(255, 255, 255, .5);
-$color-black: #000;
+$color-main: #000;
+$color-sub: #333;
 
-$color-main: #000; //追加_20250113
-$color-sub: #333; //追加_20250113
-$color-point: #46c017; //追加_20250113
-// $color-plane: #;
-// $color-pale: #;
-$color-bg: rgba(0, 121, 242, 0.05); //追加_20250113
+$color-blue:#0079f2;
+$color-yellow:#f2a118;
+$color-green:#46c017;
+$color-orange:#f26618;
+$color-pink:#f11f8d;
+$color-gray_pale: #f0f0f0;
+$color-gray_dark: #555;
+$color-gray_light: #999;
 
-$color-pink: #f11f8d; //追加_20250113
-$color-orange: #f26618; //追加_20250113
+$color-bg-orange: #ffedcc;
+$color-bg-orange_light: #ffeee5;
+$color-bg-yellow: #fff6e5;
+$color-bg-black: #222;
+$color-bg-gray_pale: rgba(0, 121, 242, 0.05); 
+
 
 //-----------------------------------
 //Pass
@@ -57,7 +60,7 @@ $pass: '../images/';
 $breakpoints: (
   sp: 'screen and (max-width: 767px)',
   pc: 'screen and (min-width: 768px)',
-  pc-wide: 'screen and (min-width: 1050px)',
+  pc-cp: 'screen and (min-width: 980px)',
 );
 
 
