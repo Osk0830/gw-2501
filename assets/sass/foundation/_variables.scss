@@ -10,37 +10,26 @@
 $f-main: 'Noto Sans JP', sans-serif;
 $f-sub: 'poppins', serif;
 
-// フォントの変数の定義についてはチームAで相談して決定（どこまでを変数とするべきか）
-
-
+// 要確認：font weightの変数定義は必要か？
 // Font weight
-// $f-regular: 400;
-// $f-bold: 700;
-// $f-extrabold: 800;
-// フォントウェイトを定義する必要あるか？
-// フォントウェイトの定義方法は次の定義のほうがよいでのはないか？
-// $f-weight: (
-//   regular: 400,
-//   bold:700,
-//   extrabold:800,
-// )
+$f-regular: 400;
+$f-bold: 700;
+$f-extrabold: 800;
 
+// 要確認：Font-styleの変数定義は必要か？
 // Font-style
-// $f-normal: normal;
-// $f-italic: italic;
-// フォントスタイルを定義する必要あるか？
+$f-normal: normal;
+$f-italic: italic;
 
 // $font-point: ;
 // 変数「フォントポイント」とは何か？（root sizeとは別？）
 
-// フォントの変数定義について
-// 次の変数定義の方がよいのではないか？
-// @mixin font($family, $weight, $style){
-//   font-family: $f-main,
-//   font-weight: $weight,
-//   font-style: $style;
-// }
-
+// そのほかのfontの変数定義について(@mixinを使う)
+@mixin font($family, $weight, $style){
+  font-family: $f-main;
+  font-weight: $weight;
+  font-style: $style;
+}
 
 // root Size
 $fz-root: 16;
@@ -59,13 +48,13 @@ $lh-main: 1.75;
   line-height: calc($height / $font-size);
 }
 
-
 //-----------------------------------
 //Color
 //-----------------------------------
 $color-white: #FFF;
 $color-white50: rgba(255, 255, 255, .5);
 $color-black: #000;
+
 $color-main: #333;
 $color-blue:#0079f2;
 $color-yellow:#f2a118;
@@ -106,7 +95,6 @@ $breakpoints: (
     @content;
   }
 }
-//【高草木さんに確認】：メディアクエリーでは何を指定しているのか
 
 //-----------------------------------
 //Base Width
