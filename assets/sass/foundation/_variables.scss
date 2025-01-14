@@ -4,11 +4,32 @@
 //Font
 //------------------------------------
 
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Poppins:ital,wght@0,700;0,800;1,700;1,800&display=swap');
 
 // Font Family
-$font-main: 'Noto Sans JP', sans-serif;
+$f-main: 'Noto Sans JP', sans-serif;
+$f-sub: 'poppins', serif;
+
+// 要確認：font weightの変数定義は必要か？
+// Font weight
+$f-regular: 400;
+$f-bold: 700;
+$f-extrabold: 800;
+
+// 要確認：Font-styleの変数定義は必要か？
+// Font-style
+$f-normal: normal;
+$f-italic: italic;
+
 // $font-point: ;
+// 変数「font-point」とは何か？（root sizeとは別？）
+
+// そのほかのfontの変数定義について(@mixinを使う)
+@mixin font($family: $f-main, $weight: 400, $style: normal){
+  font-family: $family;
+  font-weight: $weight;
+  font-style: $style;
+}
 
 // root Size
 $fz-root: 16;
@@ -27,21 +48,28 @@ $lh-main: 1.75;
   line-height: calc($height / $font-size);
 }
 
-
 //-----------------------------------
 //Color
 //-----------------------------------
-$color-white: #FFF;
-$color-white50: rgba(255, 255, 255, .5);
-$color-black: #000;
+$c-white: #FFF;
+$c-white50: rgba(255, 255, 255, .5);
+$c-black: #000;
 
-// $color-main: #;
-// $color-sub: #;
-// $color-point: #;
-// $color-plane: #;
-// $color-pale: #;
-// $color-bg: #;
-;
+$c-main: #333;
+$c-blue:#0079f2;
+$c-yellow:#f2a118;
+$c-green:#46c017;
+$c-orange:#f26618;
+$c-pink:#f11f8d;
+$c-gray: #f0f0f0;
+
+$c-bg-1:#ffedcc;
+$c-bg-2:#ffeee5;
+$c-bg-3:#fff6e5;
+$c-table-frame: #ddd;
+$c-table-bg: #f5f5f5;
+$c-footer-bg: #222;
+$c-copyright: #999;
 
 //-----------------------------------
 //Pass
@@ -55,6 +83,7 @@ $pass: '../images/';
 $breakpoints: (
   sp: 'screen and (max-width: 767px)',
   pc: 'screen and (min-width: 768px)',
+  // ブレイクポイントを追加
   pc-wide: 'screen and (min-width: 1050px)',
 );
 
@@ -68,7 +97,6 @@ $breakpoints: (
   }
 }
 
-
 //-----------------------------------
 //Base Width
 //-----------------------------------
@@ -81,3 +109,8 @@ $base-width-pc: 1536;
 //-----------------------------------
 $width-main: 1080px;
 $width-wide: 1250px;
+
+//-----------------------------------
+//Transition
+//-----------------------------------
+$transition: all 0.3s;
