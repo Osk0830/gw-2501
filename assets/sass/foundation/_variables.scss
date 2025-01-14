@@ -83,7 +83,7 @@ $pass: '../images/';
 $breakpoints: (
   sp: 'screen and (max-width: 767px)',
   pc: 'screen and (min-width: 768px)',
-  // ブレイクポイントを追加
+  pc-mid: 'screen and (min-width: 980px)',
   pc-wide: 'screen and (min-width: 1050px)',
 );
 
