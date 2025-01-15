@@ -4,3 +4,35 @@
 // .c-btn-primary {
 
 // }
+
+.btn {
+  @include v.rem(20);
+  background-color: v.$color-pink;
+  color: #fff; //variables未設定，$color-white: #fff
+  width: 17.5rem;
+  margin: 0 auto 2rem;
+  padding-top: .6rem;
+  padding-bottom: .7rem;
+  border-radius: 1.875rem;
+  text-align: center;
+  position: relative;
+  display: block;
+  letter-spacing: 0;
+  border: solid .125rem v.$color-pink;
+
+  &:hover {
+    background-color: #fff;
+    color: v.$color-pink;
+    border: solid .125rem v.$color-pink;
+  }
+
+  @include v.mq(pc) {
+    width: 20rem;
+    padding-top: .7rem;
+  }
+
+  i {
+    position: absolute;
+    right: 1.2rem;
+  }
+}
