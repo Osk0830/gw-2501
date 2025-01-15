@@ -7,29 +7,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Poppins:ital,wght@0,700;0,800;1,700;1,800&display=swap');
 
 // Font Family
-$f-main: 'Noto Sans JP', sans-serif;
-$f-sub: 'poppins', serif;
-
-// 要確認：font weightの変数定義は必要か？
-// Font weight
-$f-regular: 400;
-$f-bold: 700;
-$f-extrabold: 800;
-
-// 要確認：Font-styleの変数定義は必要か？
-// Font-style
-$f-normal: normal;
-$f-italic: italic;
-
-// $font-point: ;
-// 変数「font-point」とは何か？（root sizeとは別？）
-
-// そのほかのfontの変数定義について(@mixinを使う)
-@mixin font($family: $f-main, $weight: 400, $style: normal){
-  font-family: $family;
-  font-weight: $weight;
-  font-style: $style;
-}
+$f-main: 'Noto Sans JP',
+sans-serif;
+$f-sub: 'poppins',
+serif;
 
 // root Size
 $fz-root: 16;
@@ -80,8 +61,7 @@ $pass: '../images/';
 //-----------------------------------
 //Break Point
 //-----------------------------------
-$breakpoints: (
-  sp: 'screen and (max-width: 767px)',
+$breakpoints: (sp: 'screen and (max-width: 767px)',
   pc: 'screen and (min-width: 768px)',
   pc-mid: 'screen and (min-width: 980px)',
   pc-wide: 'screen and (min-width: 1050px)',

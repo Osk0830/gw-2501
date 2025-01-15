@@ -1,6 +1,36 @@
 @use '../foundation/variables'as v;
 @use '../foundation/functions'as f;
 
-// .c-heading-sec {
+.section-title {
+  @include v.rem(24);
+  line-height: 2.75rem; //要確認
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-bottom: 2.5rem;
 
+  @include v.mq(pc) {
+    @include v.rem(36);
+    margin-bottom: 3.75rem;
+    row-gap: 1.2rem;
+  }
+
+  &::after {
+    content: "";
+    background-color: v.$c-blue;
+    width: 1.5rem;
+    height: 0.125rem;
+    position: absolute;
+    bottom: -0.5rem;
+
+    @include v.mq(pc) {
+      width: 2.25rem;
+      bottom: -1.4rem;
+    }
+  }
+}
+
+// .c-heading-sec {
 // }
