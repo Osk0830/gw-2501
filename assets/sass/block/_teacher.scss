@@ -3,7 +3,7 @@
 
 
 /* 講師紹介
------------------------------------------- */
+------------------------------------------- */
 
 .teacher-content {
     display: flex;
@@ -25,8 +25,8 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    border-radius: 0.5rem;
-    padding: 0.875rem 0.875rem 1rem 0.875rem;
+    border-radius: .5rem;
+    padding: .875rem .875rem 1rem .875rem;
     row-gap: 1rem;
     width: 100%;
     box-sizing: border-box;
@@ -35,8 +35,8 @@
     @include v.mq(pc) {
         padding: 1.375rem 1.5rem;
         row-gap: 1rem;
-        height: 24.75rem;
-        max-width: 22.5rem;
+        height: 396px;
+        max-width: 360px;
     }
 
     &--bg-orange {
@@ -52,7 +52,7 @@
 
         img {
             border-radius: 50%;
-            margin-bottom: 0.25rem;
+            margin-bottom: .25rem;
 
             @include v.mq(pc) {
                 margin-bottom: 0.75rem;
@@ -60,27 +60,27 @@
         }
     }
 
-    &__name-text{
+    &__name-text {
         @include v.rem(18);
         font-weight: 700;
         color: v.$color-sub;
-        margin-bottom: 0.125rem;
+        margin-bottom: .125rem;
     }
 
-    &__career-text{
+    &__career-text {
         @include v.rem(14);
         font-weight: 700;
         color: v.$color-sub;
     }
-    
-    &__comment{
+
+    &__comment {
         background-color: v.$color-bg-white;
-        padding: 0.5rem 1.25rem;
-        border-radius: 0.5rem;
+        padding: .5rem 1.25rem;
+        border-radius: .5rem;
 
         @include v.mq(pc) {
             @include v.rem(16);
-            padding: 0.5rem 1rem 0.75rem;
+            padding: .5rem 1rem .75rem;
         }
     }
 }
