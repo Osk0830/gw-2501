@@ -1,18 +1,15 @@
 @use '../foundation/variables'as v;
 @use '../foundation/functions'as f;
 
-// .c-btn-primary {
 
-// }
-
-.btn {
+.c-btn--pink {
   @include v.rem(20);
   background-color: v.$color-pink;
-  color: #fff; //variables未設定，$color-white: #fff
-  width: 17.5rem;
-  margin: 0 auto 2rem;
-  padding-top: .6rem;
-  padding-bottom: .7rem;
+  color: $color-white;
+  width: 280px;
+  margin: 0 auto 32px;
+  padding-top: 9.6px;
+  padding-bottom: 11.2px;
   border-radius: 1.875rem;
   text-align: center;
   position: relative;
@@ -27,8 +24,8 @@
   }
 
   @include v.mq(pc) {
-    width: 20rem;
-    padding-top: .7rem;
+    width: 320px;
+    padding-top: 11.2px;
   }
 
   i {
