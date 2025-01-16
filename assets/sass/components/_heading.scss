@@ -1,32 +1,33 @@
 @use '../foundation/variables'as v;
 @use '../foundation/functions'as f;
 
-// .c-heading-sec {
-
-// }
-
 
 .main {
    h1 {
-       line-height: 1;
+      line-height: 1;
+
+      img {
+         max-width: 100%;
+      }
    }
-   h1 img {
-      max-width: 10rem;
-   }
+
    h2 {
-      font-size: 24px;
+      @include v.rem(24);
       font-weight: bold;
       color: $color-main;
       text-align: center;
    }
 
    @include v.mq(pc) {
-      h1 img {
-         max-width: 12.1875rem;
-         padding: 0 0.2125rem 1.9125rem 0;
+      h1 {
+         img {
+            max-width: 100%;
+            padding: 0 2.55px 22.95px 0;
+         }
       }
+
       h2 {
-        font-size: 36px;
+         @include v.rem(36);
       }
    }
 }
