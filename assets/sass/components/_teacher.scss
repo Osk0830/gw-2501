@@ -27,7 +27,7 @@
 }
 
 .teacher__content {
-    border-radius: .5rem;
+    border-radius: .5rem; //変数いる？
     background-color: v.$c-bg-2;
     margin: 0 1.5rem;
     padding: 1rem;
@@ -80,7 +80,7 @@
 .teacher__content-bottom {
     padding: .5rem 1rem 0.7rem;
     background-color: #fff;
-    border-radius: .5rem;
+    border-radius: .5rem; //変数いる？
     margin-top: .8rem;
 
     @include v.mq(pc) {
