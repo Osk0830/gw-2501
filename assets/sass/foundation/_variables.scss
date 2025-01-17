@@ -12,6 +12,10 @@ sans-serif;
 $f-sub: 'poppins',
 serif;
 
+// Font weight
+$f-regular: 400;
+$f-bold: 700;
+
 // root Size
 $fz-root: 16;
 $fz-root-px: 16;
@@ -94,3 +98,8 @@ $width-wide: 1250px;
 //Transition
 //-----------------------------------
 $transition: all 0.3s;
+
+// border radius
+@mixin fillet($base-radius:0.5rem) {
+  border-radius: $base-radius; //数字を変えて使いたい時は @include fillet(0.5rem 0.5rem 0 0)で指定  ※左上と右上のみ0.5remのborder-radiusを入れたい場合
+}
