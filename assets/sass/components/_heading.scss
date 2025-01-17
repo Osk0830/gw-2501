@@ -36,9 +36,10 @@ h2 {
 .underline {
    width: 18px;
    border-bottom: 1.5px solid $color-blue;
-   margin: 0 auto;
+   margin: 0 auto 32px;
 
    @include v.mq(pc) {
       width: 27px;
+      margin-bottom: 40px;
    }
 }
