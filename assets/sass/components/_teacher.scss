@@ -1,26 +1,22 @@
 @use '../foundation/variables'as v;
 @use '../foundation/functions'as f;
 
-.teacher .container {
+.teacher__container {
     padding-top: 4.6rem;
-}
 
-@media (min-width:768px) {
-    .teacher .container {
+    @include v.mq(pc) {
         padding-top: 6rem;
         padding-bottom: 5.8rem;
     }
 }
 
-.teacher-box {
+.teacher__box {
     display: flex;
     flex-direction: column;
     margin-top: 2.6rem;
     row-gap: 1.6rem;
-}
 
-@media (min-width:768px) {
-    .teacher-box {
+    @include v.mq(pc) {
         flex-direction: row;
         align-items: center;
         max-width: 46.875rem;
@@ -30,15 +26,17 @@
     }
 }
 
-.teacher-content {
+.teacher__content {
     border-radius: .5rem;
-    background-color: #ffeee5;
+    background-color: v.$c-bg-2;
     margin: 0 1.5rem;
     padding: 1rem;
-}
 
-@media (min-width:768px) {
-    .teacher-content {
+    &--yellow {
+        background: v.$c-bg-3;
+    }
+
+    @include v.mq(pc) {
         width: calc((100% - 2rem) / 2);
         height: 24.625rem;
         margin: 0;
@@ -46,54 +44,46 @@
     }
 }
 
-.teacher-content:nth-child(2) {
-    background-color: #fff6e5;
-}
-
 /* 上半分 */
-.teacher-content-top {
+.teacher__content-top {
     text-align: center;
 }
 
-.teacher-content-image {
+.teacher__content-image {
     border-radius: 50%;
-}
 
-.teacher-content-name {
-    font-size: 1.125rem;
-    padding-top: .2rem;
-}
-
-.teacher-content-history {
-    font-size: .875rem;
-    padding-top: .2rem;
-}
-
-@media (min-width:768px) {
-    .teacher-content-image {
+    @include v.mq(pc) {
         height: 8rem;
         object-fit: none;
     }
+}
 
-    .teacher-content-name {
+.teacher__content-name {
+    font-size: 1.125rem;
+    padding-top: .2rem;
+
+    @include v.mq(pc) {
         padding-top: .7rem;
     }
+}
 
-    .teacher-content-history {
+.teacher__content-history {
+    font-size: .875rem;
+    padding-top: .2rem;
+
+    @include v.mq(pc) {
         padding-top: 0;
     }
 }
 
 /* 下半分 */
-.teacher-content-bottom {
+.teacher__content-bottom {
     padding: .5rem 1rem 0.7rem;
     background-color: #fff;
     border-radius: .5rem;
     margin-top: .8rem;
-}
 
-@media (min-width:768px) {
-    .teacher-content-bottom {
+    @include v.mq(pc) {
         margin-top: 1.2rem;
     }
 }
