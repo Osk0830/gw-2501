@@ -2,37 +2,43 @@
 @use '../foundation/functions'as f;
 
 
-.header {
-   h1 {
-      line-height: 1;
+h1 {
+   line-height: 1;
 
+   img {
+      max-width: 100%;
+   }
 
-      img {
-         max-width: 100%;
-      }
-
-      @include v.mq(pc) {
-         h1 {
-            img {
-               max-width: 100%;
-               padding: 0 2.55px 22.95px 0;
-            }
+   @include v.mq(pc) {
+      h1 {
+         img {
+            max-width: 100%;
+            padding: 0 2.55px 22.95px 0;
          }
       }
    }
 }
 
-.main {
-   h2 {
-      @include v.rem(24);
-      font-weight: bold;
-      color: $color-main;
-      text-align: center;
 
-      @include v.mq(pc) {
-         h2 {
-            @include v.rem(36);
-         }
-      }
+h2 {
+   @include v.rem(24);
+   font-weight: bold;
+   color: $color-main;
+   text-align: center;
+   margin-bottom: 4px;
+
+   @include v.mq(pc) {
+      @include v.rem(36);
+      margin-bottom: 5px;
+   }
+}
+
+.underline {
+   width: 18px;
+   border-bottom: 1.5px solid $color-blue;
+   margin: 0 auto;
+
+   @include v.mq(pc) {
+      width: 27px;
    }
 }
