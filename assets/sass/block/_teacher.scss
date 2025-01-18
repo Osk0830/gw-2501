@@ -10,12 +10,12 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    row-gap: 1.75rem;
-    padding: 0 1.5rem;
+    row-gap: 28px;
+    padding: 0 24px;
 
     @include v.mq(pc) {
         flex-direction: row;
-        column-gap: 2rem;
+        column-gap: 32px;
         align-items: flex-start;
     }
 }
@@ -26,15 +26,15 @@
     justify-content: center;
     flex-direction: column;
     border-radius: .5rem;
-    padding: .875rem .875rem 1rem .875rem;
-    row-gap: 1rem;
+    padding: 14px 14px 16px 14px;
+    row-gap: 16px;
     width: 100%;
     box-sizing: border-box;
     justify-content: flex-start;
 
     @include v.mq(pc) {
-        padding: 1.375rem 1.5rem;
-        row-gap: 1rem;
+        padding: 22px 24px;
+        row-gap: 16px;
         height: 396px;
         max-width: 360px;
     }
@@ -52,10 +52,10 @@
 
         img {
             border-radius: 50%;
-            margin-bottom: .25rem;
+            margin-bottom: 4px;
 
             @include v.mq(pc) {
-                margin-bottom: 0.75rem;
+                margin-bottom: 12px;
             }
         }
     }
@@ -64,7 +64,7 @@
         @include v.rem(18);
         font-weight: 700;
         color: v.$color-sub;
-        margin-bottom: .125rem;
+        margin-bottom: 2px;
     }
 
     &__career-text {
@@ -75,12 +75,12 @@
 
     &__comment {
         background-color: v.$color-bg-white;
-        padding: .5rem 1.25rem;
+        padding: 8px 20px;
         border-radius: .5rem;
 
         @include v.mq(pc) {
             @include v.rem(16);
-            padding: .5rem 1rem .75rem;
+            padding: 8px 16px 12px;
         }
     }
 }
