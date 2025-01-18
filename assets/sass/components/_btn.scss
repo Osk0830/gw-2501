@@ -5,7 +5,7 @@
 .c-btn--pink {
   @include v.rem(20);
   background-color: v.$color-pink;
-  color: $color-white;
+  color: v.$color-bg-white;
   width: 280px;
   margin: 0 auto 32px;
   padding-top: 9.6px;
