@@ -1,6 +1,35 @@
 @use '../foundation/variables'as v;
 @use '../foundation/functions'as f;
 
-// .c-btn-primary {
 
-// }
+.c-btn--pink {
+  @include v.rem(20);
+  background-color: v.$color-pink;
+  color: $color-white;
+  width: 280px;
+  margin: 0 auto 32px;
+  padding-top: 9.6px;
+  padding-bottom: 11.2px;
+  border-radius: 1.875rem;
+  text-align: center;
+  position: relative;
+  display: block;
+  letter-spacing: 0;
+  border: solid .125rem v.$color-pink;
+
+  &:hover {
+    background-color: #fff;
+    color: v.$color-pink;
+    border: solid .125rem v.$color-pink;
+  }
+
+  @include v.mq(pc) {
+    width: 320px;
+    padding-top: 11.2px;
+  }
+
+  i {
+    position: absolute;
+    right: 1.2rem;
+  }
+}
