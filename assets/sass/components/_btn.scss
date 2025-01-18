@@ -14,7 +14,7 @@
   justify-content: center;
   align-items: center; //要確認
   position: relative;
-  // transition: all 0.3s; ※baseで指定している場合は不要
+  transition: $transition;
 
   @include v.mq(pc) {
     width: 20rem;
@@ -66,7 +66,7 @@
 
       @include v.mq(pc-mid) {
         top: 25%;
-        right: 0.9rem;
+        right: .9rem;
         @include v.rem(32);
       }
     }
