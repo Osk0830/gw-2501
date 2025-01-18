@@ -1,27 +1,32 @@
 @use './variables' as v;
 @use './functions' as f;
 
-// 変数やmixinの使い方のサンプルです
-.sample {
+body {
   font-family: v.$font-main;
-  @include v.rem(24);
+  @include v.rem(18);
   line-height: v.$lh-main;
-  width: f.per(500, 750);
 
   @include v.mq(pc) {
-    @include v.rem(36);
-    @include v.lh(36, 44);
-    width: f.vwPc(600);
+    @include v.rem(20);
   }
+}
 
-  &::before {
-    background-image: url("#{v.$pass}cover_sp_1.png");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: contain;
+a {
+  color: v.$color-main;
+  text-decoration: none;
 
-    @include v.mq(pc) {
-      background: url("#{v.$pass}cover_pc_1.png") no-repeat center center cover;
-    }
+  &:hover,
+  i {
+    transition: all .3s;
   }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom
+}
+
+ul {
+  list-style: none;
 }
