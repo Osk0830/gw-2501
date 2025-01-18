@@ -3,4 +3,89 @@
 
 // .c-btn-primary {
 
+// 多用するピンク背景のボタン
+.button {
+  width: 17.375rem;
+  height: 3.75rem;
+  background-color: v.$c-pink;
+  border: solid 2px v.$c-pink;
+  border-radius: 1.875rem;
+  display: flex;
+  justify-content: center;
+  align-items: center; //要確認
+  position: relative;
+  transition: $transition;
+
+  @include v.mq(pc) {
+    width: 20rem;
+  }
+
+  p {
+    @include v.rem(20);
+    margin-top: 11.2px; //できれば別の方法（align-items:center）等で調整したい
+  }
+
+  i {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    @include v.rem(24);
+    line-height: 1;
+  }
+
+  &:hover {
+    background-color: v.$c-white;
+
+    p {
+      color: v.$c-white;
+    }
+  }
+
+  // キャンペーンのボタン
+  //htmlでモディファイclass="button--campaign"を指定
+  &--campaign {
+    width: 19.875rem;
+    background-color: v.$c-white;
+
+    p {
+      @include v.rem(20);
+      color: v.$c-pink;
+
+      @include v.mq(pc-mid) {
+        @include v.rem(23);
+      }
+    }
+
+    i {
+      position: absolute;
+      top: 23%;
+      right: .75rem;
+      @include v.rem(28.8);
+      color: v.$c-pink;
+      line-height: 1;
+
+      @include v.mq(pc-mid) {
+        top: 25%;
+        right: .9rem;
+        @include v.rem(32);
+      }
+    }
+
+    &:hover {
+      background-color: v.$c-pink;
+
+      p,
+      i {
+        color: v.$c-white;
+      }
+    }
+
+    @include v.mq(pc-mid) {
+      width: 21.8125rem;
+      height: 4.75rem;
+      border-radius: 2.375rem;
+    }
+  }
+}
+
 // }
