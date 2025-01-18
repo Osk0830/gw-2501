@@ -10,7 +10,7 @@
     }
 }
 
-.teacher__box {
+.teacher__wrapper {
     display: flex;
     flex-direction: column;
     margin-top: 2.6rem;
@@ -18,7 +18,7 @@
 
     @include v.mq(pc) {
         flex-direction: row;
-        align-items: center;
+        align-items: stretch;
         max-width: 46.875rem;
         margin: .1rem auto;
         column-gap: 2rem;
@@ -26,8 +26,8 @@
     }
 }
 
-.teacher__content {
-    border-radius: .5rem; //変数いる？
+.teacherBox {
+    @include v.fillet;
     background-color: v.$c-bg-2;
     margin: 0 1.5rem;
     padding: 1rem;
@@ -38,52 +38,50 @@
 
     @include v.mq(pc) {
         width: calc((100% - 2rem) / 2);
-        height: 24.625rem;
         margin: 0;
         padding: 1.5rem;
     }
-}
 
-/* 上半分 */
-.teacher__content-top {
-    text-align: center;
-}
-
-.teacher__content-image {
-    border-radius: 50%;
-
-    @include v.mq(pc) {
-        height: 8rem;
-        object-fit: none;
+    &__top {
+        text-align: center;
     }
-}
 
-.teacher__content-name {
-    font-size: 1.125rem;
-    padding-top: .2rem;
+    &__image {
+        border-radius: 50%;
 
-    @include v.mq(pc) {
-        padding-top: .7rem;
+        @include v.mq(pc) {
+            height: 8rem;
+            object-fit: none;
+        }
     }
-}
 
-.teacher__content-history {
-    font-size: .875rem;
-    padding-top: .2rem;
-
-    @include v.mq(pc) {
-        padding-top: 0;
+    &__name{
+        font-size: 1.125rem;
+        padding-top: .2rem;
+    
+        @include v.mq(pc) {
+            padding-top: .7rem;
+        }
     }
-}
 
-/* 下半分 */
-.teacher__content-bottom {
-    padding: .5rem 1rem 0.7rem;
-    background-color: #fff;
-    border-radius: .5rem; //変数いる？
-    margin-top: .8rem;
+    &__history{
+        font-size: .875rem;
+        padding-top: .2rem;
+    
+        @include v.mq(pc) {
+            padding-top: 0;
+        }
+    }
 
-    @include v.mq(pc) {
-        margin-top: 1.2rem;
+    &__bottom {
+        padding: .5rem 1rem 0.7rem;
+        background-color: #fff;
+        border-radius: .5rem; //変数いる？
+        margin-top: .8rem;
+    
+        @include v.mq(pc) {
+            margin-top: 1.2rem;
+            @include v.rem(16);
+        }
     }
 }
