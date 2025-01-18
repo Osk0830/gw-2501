@@ -1,0 +1,89 @@
+@use '../foundation/variables'as v;
+@use '../foundation/functions'as f;
+
+.teacher__container {
+    padding-top: 4.6rem;
+
+    @include v.mq(pc) {
+        padding-top: 6rem;
+        padding-bottom: 5.8rem;
+    }
+}
+
+.teacher__box {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2.6rem;
+    row-gap: 1.6rem;
+
+    @include v.mq(pc) {
+        flex-direction: row;
+        align-items: center;
+        max-width: 46.875rem;
+        margin: .1rem auto;
+        column-gap: 2rem;
+        padding-top: 3.3rem;
+    }
+}
+
+.teacher__content {
+    border-radius: .5rem; //変数いる？
+    background-color: v.$c-bg-2;
+    margin: 0 1.5rem;
+    padding: 1rem;
+
+    &--yellow {
+        background: v.$c-bg-3;
+    }
+
+    @include v.mq(pc) {
+        width: calc((100% - 2rem) / 2);
+        height: 24.625rem;
+        margin: 0;
+        padding: 1.5rem;
+    }
+}
+
+/* 上半分 */
+.teacher__content-top {
+    text-align: center;
+}
+
+.teacher__content-image {
+    border-radius: 50%;
+
+    @include v.mq(pc) {
+        height: 8rem;
+        object-fit: none;
+    }
+}
+
+.teacher__content-name {
+    font-size: 1.125rem;
+    padding-top: .2rem;
+
+    @include v.mq(pc) {
+        padding-top: .7rem;
+    }
+}
+
+.teacher__content-history {
+    font-size: .875rem;
+    padding-top: .2rem;
+
+    @include v.mq(pc) {
+        padding-top: 0;
+    }
+}
+
+/* 下半分 */
+.teacher__content-bottom {
+    padding: .5rem 1rem 0.7rem;
+    background-color: #fff;
+    border-radius: .5rem; //変数いる？
+    margin-top: .8rem;
+
+    @include v.mq(pc) {
+        margin-top: 1.2rem;
+    }
+}
