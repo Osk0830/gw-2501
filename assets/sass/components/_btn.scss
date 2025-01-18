@@ -1,8 +1,6 @@
 @use '../foundation/variables'as v;
 @use '../foundation/functions'as f;
 
-// .c-btn-primary {
-
 // 多用するピンク背景のボタン
 .button {
   width: 17.375rem;
@@ -18,11 +16,7 @@
 
   @include v.mq(pc) {
     width: 20rem;
-  }
-
-  p {
     @include v.rem(20);
-    margin-top: 11.2px; //できれば別の方法（align-items:center）等で調整したい
   }
 
   i {
@@ -35,10 +29,7 @@
 
   &:hover {
     background-color: v.$c-white;
-
-    p {
-      color: v.$c-white;
-    }
+    color: v.$c-pink;
   }
 
   // キャンペーンのボタン
@@ -46,14 +37,11 @@
   &--campaign {
     width: 19.875rem;
     background-color: v.$c-white;
+    color: v.$c-pink;
+    @include v.rem(20);
 
-    p {
-      @include v.rem(20);
-      color: v.$c-pink;
-
-      @include v.mq(pc-mid) {
-        @include v.rem(23);
-      }
+    @include v.mq(pc-mid) {
+      @include v.rem(23);
     }
 
     i {
@@ -73,11 +61,7 @@
 
     &:hover {
       background-color: v.$c-pink;
-
-      p,
-      i {
-        color: v.$c-white;
-      }
+      color: v.$c-white;
     }
 
     @include v.mq(pc-mid) {
@@ -87,5 +71,3 @@
     }
   }
 }
-
-// }
