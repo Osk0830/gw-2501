@@ -2,7 +2,6 @@
 @use '../foundation/functions'as f;
 
 .contact {
-  //denさんに確認：問い合わせのcontact__after-teacherとは？標準をcontactとしたときのモディファイア？その場合の標準はカバーしたもの？青背景のcontactを標準としたほうがよい？
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -16,7 +15,6 @@
   }
 
   &__text {
-    //denさんに確認：コンタクト内の文字の改行はどのように行った？（こちらでは１段目と２段目をspanでそれぞれ囲う形で改行）
     @include v.rem(16);
     line-height: 1.7;
     display: flex;
