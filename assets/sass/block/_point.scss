@@ -1,0 +1,97 @@
+@use '../foundation/variables'as v;
+@use '../foundation/functions'as f;
+
+
+/* Point
+------------------------------------------- */
+
+// itemブロック
+.point-item {
+  margin-bottom: 33px;
+
+  @include v.mq(pc) {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+
+    &:nth-child(even) {
+      flex-direction: row;
+    }
+
+    &--3rd {
+      padding-top: 17px;
+    }
+  }
+}
+
+// 画像ブロック
+.point-image {
+  text-align: center;
+  padding-top: 4px;
+
+  @include v.mq(pc) {
+    width: 50%;
+    padding-left: 16px;
+  }
+
+  &--even {
+    padding-left: 0;
+    padding-right: 16px;
+  }
+
+  img {
+    border-radius: .5rem;
+  }
+}
+
+
+// テキストブロック
+.point-text {
+  max-width: 510px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include v.mq(pc) {
+    width: 50%;
+    padding-bottom: 60.8px;
+
+    &--even {
+      padding-top: 9px;
+      padding-left: 16px;
+    }
+  }
+
+  &--even &__text {
+    padding-left: 16px;
+  }
+
+  &__number,
+  &__comment {
+    display: block;
+    letter-spacing: -0.02em;
+
+    @include v.mq(pc) {
+      @include v.rem (24);
+      line-height: 1.8;
+    }
+  }
+
+  // ナンバー
+  &__number {
+    @include v.rem(56.8);
+    color: v.$color-green;
+    font-style: italic;
+    font-weight: 700;
+    font-family: v.$font-point;
+    line-height: 1;
+    padding-top: 12px;
+
+    @include v.mq(pc) {
+      @include v.rem(80);
+      margin-top: 92px;
+      padding-left: 1px;
+    }
+  }
+}
+
+
