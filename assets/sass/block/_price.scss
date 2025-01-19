@@ -249,18 +249,17 @@
     font-size: .75rem;
     text-align: center;
     padding-top: 0.2rem;
-}
 
-@media (min-width:768px) {
-    .price-notes {
+    @include v.mq(pc){
         text-align: left;
         line-height: 1.7;
     }
-}
 
-@media (min-width:768px) {
-    .price-list.junior-high-school .price-notes {
-        line-height: 1.7;
-        margin-top: 0;
-    }
+    // 中学校の方は別途微調整していたが今回は省略？
+    /* @media (min-width:768px) {
+        .price-list.junior-high-school .price-notes {
+            line-height: 1.7;
+            margin-top: 0;
+        }
+    } */
 }
