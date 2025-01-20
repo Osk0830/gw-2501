@@ -1,0 +1,270 @@
+@use '../foundation/variables'as v;
+@use '../foundation/functions'as f;
+
+
+/* 料金プラン
+------------------------------------------ */
+
+//料金表全体のBOX
+.price-box{
+    display: flex;
+    flex-direction: column;
+    row-gap: 48px;
+
+    @include v.mq(pc) {
+        row-gap: 28px;
+    }
+}
+
+//料金表ひとつのBOX
+.price-table {
+    &__title {
+        @include v.rem(20);
+        margin-bottom: 10px;
+
+        @include v.mq(pc) {
+            @include v.rem(25);
+            margin-bottom: 6px;
+        }
+    }
+
+    &__content {
+        border-collapse: collapse;
+        border: solid 0.125rem v.$color-gray_pale2;
+        width: 100%;
+    }
+
+    th,
+    td {
+        border: solid 0.0625rem v.$color-gray_pale2;
+    }
+
+    thead {
+        th {
+            background-color: v.$color-bg-gray_light;
+            padding: 16px;
+            line-height: 1;
+            color: v.$color-sub;
+
+            @include v.mq(pc) {
+                @include v.rem(18);
+            }
+
+            &:first-child {
+                width: 32%;
+            }
+        }
+    }
+
+    tbody {
+        th {
+            color: v.$color-blue;
+            text-wrap: nowrap;
+            padding: 0 0 10px;
+
+            @include v.mq(pc) {
+                @include v.rem(18);
+            }
+        }
+
+        td {
+            text-align: center;
+            padding: 10px 8px 12px;
+        }
+    }
+
+    &__description {
+        @include v.rem(14);
+        margin-bottom: 6px;
+        color: v.$color-sub;
+
+        @include v.mq(pc) {
+            @include v.rem(16);
+        }
+    }
+
+    &__amount {
+        @include v.rem(32);
+        color: v.$color-green;
+        line-height: 1;
+
+        @include v.mq(pc) {
+            @include v.rem(36);
+        }
+    }
+
+    &__unit {
+        @include v.rem(14);
+
+        @include v.mq(pc) {
+            @include v.rem(16);
+        }
+    }
+
+    &__precautions {
+        @include v.rem(12);
+        text-align: center;
+        color: v.$color-gray_dark;
+        margin-top: 2px;
+
+        @include v.mq(pc) {
+            text-align: left;
+            margin-top: 4px;
+        }
+    }
+
+    &--poppins {
+        font-family: v.$font-point;
+    }
+}
+
+
+
+
+
+// @media (min-width:768px) {
+//     .price-container {
+//         max-width: 47.125rem;
+//         padding-bottom: 6.5rem;
+//     }
+// }
+
+// .price .section-title {
+//     margin-bottom: 1.875rem;
+// }
+
+// @media (min-width:768px) {
+//     .price .section-title {
+//         margin-bottom: 2.5rem;
+//     }
+// }
+
+
+// .price .price-table:first-of-type {
+//     margin-bottom: 3rem;
+// }
+
+// @media (min-width:768px) {
+//     .price .price-table:first-of-type {
+//         margin-bottom: 1.75rem;
+//     }
+// }
+
+
+// .price-table-title {
+//     font-size: 1.25rem;
+//     margin-bottom: 0.625rem;
+// }
+
+// @media (min-width:768px) {
+//     .price-table-title {
+//         font-size: 1.5625rem;
+//         margin-bottom: 0.375rem;
+//     }
+// }
+
+// .price-table-content {
+//     border-collapse: collapse;
+//     border: solid 0.125rem rgb(221, 220, 220);
+//     width: 100%;
+// }
+
+// .price-table th,
+// .price-table td {
+//     border: solid 0.0625rem rgb(221, 220, 220);
+// }
+
+// .price-table thead {
+//     background-color: #f5f5f5;
+// }
+
+// .price-table-content thead th {
+//     padding: 1rem;
+//     line-height: 1;
+//     color: #333;
+// }
+
+// @media (min-width:768px) {
+//     .price-table-content thead th {
+//         font-size: 1.125rem
+//     }
+// }
+
+// .price-table-content thead th:first-child {
+//     width: 32%;
+// }
+
+// @media (min-width:768px) {
+//     .price-table-content thead th:first-child {
+//         width: 31.2%;
+//     }
+// }
+
+// .price-table-content tbody td {
+//     text-align: center;
+//     padding: 0.625rem 0.5rem 0.75rem;
+// }
+
+// .price-table-content tbody th {
+//     color: #0079f2;
+//     text-wrap: nowrap;
+//     padding: 0 0.625rem;
+// }
+
+// @media (min-width:768px) {
+//     .price-table-content tbody th {
+//         font-size: 1.125rem;
+//     }
+// }
+
+// .price-table-content .description {
+//     font-size: 0.875rem;
+//     margin-bottom: 0.375rem;
+//     font-weight: 400;
+//     color: #333;
+// }
+
+// @media (min-width:768px) {
+//     .price-table-content .description {
+//         font-size: 1rem;
+//         margin-bottom: 0.375rem;
+//     }
+// }
+
+// .price-table-content .price-amount {
+//     font-size: 2rem;
+//     color: #46c017;
+//     line-height: 1;
+// }
+
+// @media (min-width:768px) {
+//     .price-table-content .price-amount {
+//         font-size: 2.25rem;
+//     }
+// }
+
+// .price-table-content .price-unit {
+//     font-size: 0.875rem;
+//     font-weight: 400;
+// }
+
+// @media (min-width:768px) {
+//     .price-table-content .price-unit {
+//         font-size: 1rem;
+//     }
+// }
+
+// .price-table-kome {
+//     font-size: 0.75rem;
+//     text-align: center;
+//     font-weight: 400;
+//     color: #666;
+//     margin-top: 0.125rem;
+// }
+
+// @media (min-width:768px) {
+//     .price-table-kome {
+//         text-align: left;
+//         margin-top: 0.25rem;
+//     }
+// }
