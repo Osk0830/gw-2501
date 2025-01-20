@@ -3,11 +3,12 @@
 
 .section-title {
   @include v.rem(24);
-  line-height: 1;
+  line-height: 1.5;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
   position: relative;
   margin-bottom: 2.5rem;
 
