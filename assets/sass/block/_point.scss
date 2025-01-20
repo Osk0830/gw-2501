@@ -5,9 +5,19 @@
 /* Point
 ------------------------------------------- */
 
+// wrapperブロック
+.point-wrapper {
+  @include v.mq(pc) {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+  }
+}
+
 // itemブロック
 .point-item {
   margin-bottom: 33px;
+  row-gap: 5px;
 
   @include v.mq(pc) {
     display: flex;
@@ -16,10 +26,6 @@
 
     &:nth-child(even) {
       flex-direction: row;
-    }
-
-    &--3rd {
-      padding-top: 17px;
     }
   }
 }
@@ -36,7 +42,10 @@
 
   &--even {
     padding-left: 0;
-    padding-right: 16px;
+    
+    @include v.mq(pc) {
+      padding-right: 16px;
+    } 
   }
 
   img {
@@ -56,7 +65,6 @@
     padding-bottom: 60.8px;
 
     &--even {
-      padding-top: 9px;
       padding-left: 16px;
     }
   }
