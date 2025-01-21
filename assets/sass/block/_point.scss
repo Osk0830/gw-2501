@@ -1,0 +1,76 @@
+@use '../foundation/variables'as v;
+@use '../foundation/functions'as f;
+
+//margin-bottomは無し
+// .point {
+//   margin-bottom: 4.5rem;
+
+//   @include v.mq(pc) {
+//     margin-bottom: 6.625rem;
+//   }
+// }
+
+.slideItem {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2.125rem;
+
+  @include v.mq(pc) {
+    column-gap: 3rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    margin-bottom: 2.75rem;
+    flex-direction: row-reverse;
+  }
+
+  &--reverse {
+    @include v.mq(pc) {
+      flex-direction: row;
+    }
+  }
+
+  &__image {
+    @include v.fillet;
+    margin-bottom: .625rem;
+    width: 100%;
+
+    @include v.mq(pc) {
+      width: calc(100% / 2);
+      margin-bottom: 0;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    flex-direction: column;
+
+    @include v.mq(pc) {
+      width: calc(100% / 2);
+      justify-content: center;
+      row-gap: .25rem;
+    }
+  }
+
+  &__number {
+    font-family: v.$f-sub;
+    font-weight: 700;
+    font-style: italic;
+    @include v.rem(60);
+    // color: v.$c-green; クラス名で色を指定  質問：色についてscssで個別に色を指定する場合と、クラス名で指定する場合ではどちらが良いか。
+    line-height: 1;
+
+    @include v.mq(pc) {
+      @include v.rem(80);
+    }
+  }
+
+  &__text {
+    @include v.rem(18);
+    font-weight: 700;
+    line-height: v.$lh-main;
+
+    @include v.mq(pc) {
+      @include v.rem(24)
+    }
+  }
+}

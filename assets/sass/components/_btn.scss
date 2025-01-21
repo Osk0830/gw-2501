@@ -5,6 +5,8 @@
 .button {
   width: 17.375rem;
   height: 3.75rem;
+  @include v.rem(20);
+  font-weight: 700;
   background-color: v.$c-pink;
   border: solid 2px v.$c-pink;
   border-radius: 1.875rem;
