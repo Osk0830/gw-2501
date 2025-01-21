@@ -32,4 +32,35 @@ ul{
   font-weight: v.$f-bold; //なくてもいいとのことでしたが、定義してくれたので使いました
 }
 
+// 文字色
+.green{
+  color: v.$c-green;
+}
+
+.blue{
+  color: v.$c-blue
+}
+
+.yellow{
+  color: v.$c-yellow;
+}
+
+.orange{
+  color: v.$c-orange;
+}
+
+//フォントスタイル
+.bold{
+  font-weight: v.$f-bold;
+}
+
+.poppins{
+  font-family: v.$f-sub;
+  font-weight: v.$f-bold;
+  font-style: normal;
+}
+
+.poppins--bold{
+  font-weight: 800;
+}
 
