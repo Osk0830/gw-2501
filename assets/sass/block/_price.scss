@@ -1,0 +1,261 @@
+@use '../foundation/variables'as v;
+@use '../foundation/functions'as f;
+
+/* 料金
+------------------------------------------- */
+.price__container {
+    padding-bottom: 3.7rem;
+
+    @include v.mq(pc) {
+        padding-bottom: 5.2rem;
+    }
+}
+
+.priceList {
+    padding: 1.9rem 0 1.1rem;
+
+    @include v.mq(pc) {
+        max-width: 47rem;
+        margin: 0 auto;
+        padding-top: 2.6rem;
+        padding-bottom: 1.6rem;
+
+        &__bottom {
+            padding-top: .3rem;
+        }
+    }
+
+    /* タイトル */
+    &__headline {
+        font-size: 1.25rem;
+        padding-left: .1rem;
+
+        @include v.mq(pc) {
+            font-size: 1.5625rem;
+            padding-left: 0;
+        }
+    }
+
+    // 中学校の方は別途微調整していたが今回は省略？
+    /* &__bottom .pricelist_headline{
+        @include v.mq(pc){
+            font-size: 1.55rem;
+        }
+    } */
+}
+
+
+/* 表 */
+.priceTable {
+    margin-top: .7rem;
+    width: 100%;
+    border: 2px #ddd solid;
+    border-spacing: 0;
+
+    @include v.mq(pc) {
+        margin-top: .6rem;
+
+        // 中学校の方は別途微調整していたが今回は省略？
+        /* @media (min-width:768px) {
+            .price-list.junior-high-school .price-table {
+                margin-top: .4rem;
+                }
+            } */
+    }
+
+    & th,
+    & td { 
+        text-align: center;
+        vertical-align: middle;
+        border: .0625rem #ddd solid;
+
+        @include v.mq(pc) {
+            border: .05rem #ddd solid;
+        }
+    }
+
+    /* 1行目 */
+    &__head {
+        background-color: #f5f5f5;
+        height: 3rem;
+        text-align: center;
+
+        @include v.mq(pc) {
+            font-size: 1.125rem;
+            height: 3rem;
+
+            // 中学校の方は別途微調整していたが今回は省略？
+            /* @media (min-width:768px) {
+            .price-list.junior-high-school .priceTable__head {
+                height: 3.1rem;
+            }
+            } */
+        }
+    }
+
+    /* ２〜４行目 */
+    &__course {
+        padding: 1.6rem .4rem 1.8rem;
+        white-space: nowrap;
+
+        @include v.mq(pc){
+            font-size: 1.125rem;
+            padding: 1.7rem 0.3rem;
+        }
+    }
+
+    &__body td{
+        padding-top: .3rem;
+    }
+
+    &__text {
+        font-size: .875rem;
+
+        @include v.mq(pc) {
+            font-size: 1rem;
+        }
+    }
+
+    &__price {
+        font-size: 2rem;
+        padding: 0.6rem 0rem 0.8rem;
+        line-height: 1;
+
+        @include v.mq(pc) {
+            font-size: 2.25rem;
+            padding: .5rem .1rem 1rem .1rem;
+        }
+
+        & span{
+            font-family: 'Noto Sans JP', sans-serif;
+            font-size: .875rem;
+            font-weight: 500;
+
+            @include v.mq(pc){
+                font-size: 1rem;
+            }
+        }
+    }
+}
+
+// 下記、微調整に使用したコード（今回は省略？）
+/* .priceTable__body tr:nth-child(2) td {
+    padding-top: .5rem;
+}
+
+.priceTable__body tr:nth-child(2) .priceTable__price {
+    padding-bottom: .7rem;
+}
+
+.priceTable__body tr:nth-child(3) td {
+    padding-top: .5rem;
+}
+
+.priceTable__body tr:nth-child(3) .priceTable__price {
+    padding-bottom: .5rem;
+}
+
+.priceTable__body tr:nth-child(1) .priceTable__text {
+    padding-top: .2rem;
+}
+
+.priceTable__body tr:nth-child(2) .priceTable__course,
+.priceTable__body tr:nth-child(3) .priceTable__course {
+    padding-top: 1.7rem;
+}
+
+@media (min-width:768px) {
+    .priceTable__body tr:nth-child(2) .priceTable__price {
+        padding-bottom: 1.1rem;
+    }
+
+    .priceTable__body tr:nth-child(3) .priceTable__price {
+        padding-bottom: .8rem;
+    }
+}
+
+.price-list.junior-high-school .priceTable__course {
+    white-space: nowrap;
+    padding: 1.8rem .6rem 1.9rem;
+}
+
+.price-list.junior-high-school td {
+    padding-top: .4rem;
+}
+
+.price-list.junior-high-school .priceTable__text {
+    padding-right: .2rem;
+    padding-left: .2rem;
+}
+
+.price-list.junior-high-school .priceTable__price {
+    padding-top: .5rem;
+    padding-bottom: .9rem;
+}
+
+.price-list.junior-high-school tr:nth-child(2) .priceTable__course {
+    padding-top: 1.7rem;
+}
+
+.price-list.junior-high-school tr:nth-child(2) .priceTable__price {
+    padding-top: .6rem;
+    padding-bottom: .9rem;
+}
+
+.price-list.junior-high-school tr:nth-child(3) .priceTable__text {
+    padding-right: .5rem;
+    padding-left: .5rem;
+    line-height: 1.85;
+}
+
+.price-list.junior-high-school tr:nth-child(3) .priceTable__price {
+    padding-top: .4rem;
+    padding-bottom: .7rem;
+}
+
+@media (min-width:768px) {
+    .price-list.junior-high-school .priceTable__course {
+        padding: 1.8rem 0.5rem 2rem;
+    }
+
+    .price-list.junior-high-school tr:nth-child(3) .priceTable__course {
+        padding-top: 1.9rem;
+    }
+
+    .price-list.junior-high-school td {
+        padding-top: .3rem;
+    }
+
+    .price-list.junior-high-school .priceTable__price {
+        padding: 0.4rem 0rem 1.1rem;
+    }
+
+    .price-list.junior-high-school tr:nth-child(2) .priceTable__price {
+        padding-bottom: .9rem;
+    }
+
+    .price-list.junior-high-school tr:nth-child(3) .priceTable__price {
+        padding: 0.4rem 0rem 0.8rem 0.3rem;
+    }
+}
+    */
+
+/* 注意書き */
+.price__notes {
+    font-size: .75rem;
+    text-align: center;
+    padding-top: 0.2rem;
+
+    @include v.mq(pc){
+        text-align: left;
+        line-height: 1.7;
+    }
+
+    // 中学校の方は別途微調整していたが今回は省略？
+    /* @media (min-width:768px) {
+        .price-list.junior-high-school .price-notes {
+            line-height: 1.7;
+            margin-top: 0;
+        }
+    } */
+}
