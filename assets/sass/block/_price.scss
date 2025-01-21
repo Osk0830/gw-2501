@@ -6,7 +6,7 @@
 ------------------------------------------ */
 
 //料金表全体のBOX
-.price-box{
+.price-box {
     display: flex;
     flex-direction: column;
     row-gap: 48px;
@@ -91,6 +91,10 @@
         @include v.mq(pc) {
             @include v.rem(36);
         }
+
+        &--poppins {
+            font-family: v.$font-point;
+        }
     }
 
     &__unit {
@@ -113,7 +117,5 @@
         }
     }
 
-    &--poppins {
-        font-family: v.$font-point;
-    }
+
 }
