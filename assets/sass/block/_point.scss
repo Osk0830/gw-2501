@@ -56,7 +56,7 @@
     font-weight: 700;
     font-style: italic;
     @include v.rem(60);
-    color: v.$c-green;
+    // color: v.$c-green; クラス名で色を指定  質問：色についてscssで個別に色を指定する場合と、クラス名で指定する場合ではどちらが良いか。
     line-height: 1;
 
     @include v.mq(pc) {
