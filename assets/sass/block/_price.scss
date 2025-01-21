@@ -106,10 +106,6 @@
 
     &__body td{
         padding-top: .3rem;
-
-         /* @include v.mq(pc){ //(den)もとのコードに入ってたけどいらないかも
-            padding-top: .3rem;
-        } */
     }
 
     &__text {
