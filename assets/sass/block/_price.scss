@@ -64,7 +64,7 @@
     }
 
     & th,
-    & td { //(den)子孫要素の指定について記載方法を確認
+    & td { 
         text-align: center;
         vertical-align: middle;
         border: .0625rem #ddd solid;
@@ -126,7 +126,7 @@
             padding: .5rem .1rem 1rem .1rem;
         }
 
-        & span{ //(den)子孫要素の指定について記載方法を確認
+        & span{
             font-family: 'Noto Sans JP', sans-serif;
             font-size: .875rem;
             font-weight: 500;
