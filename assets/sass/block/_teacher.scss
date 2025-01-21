@@ -16,7 +16,7 @@
     @include v.mq(pc) {
         flex-direction: row;
         column-gap: 32px;
-        align-items: flex-start;
+        align-items: stretch;
     }
 }
 
@@ -35,7 +35,6 @@
     @include v.mq(pc) {
         padding: 22px 24px;
         row-gap: 16px;
-        height: 396px;
         max-width: 360px;
     }
 

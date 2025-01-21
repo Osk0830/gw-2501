@@ -1,0 +1,121 @@
+@use '../foundation/variables'as v;
+@use '../foundation/functions'as f;
+
+
+/* 料金プラン
+------------------------------------------ */
+
+//料金表全体のBOX
+.price-box {
+    display: flex;
+    flex-direction: column;
+    row-gap: 48px;
+
+    @include v.mq(pc) {
+        row-gap: 28px;
+    }
+}
+
+//料金表ひとつのBOX
+.price-table {
+    &__title {
+        @include v.rem(20);
+        margin-bottom: 10px;
+
+        @include v.mq(pc) {
+            @include v.rem(25);
+            margin-bottom: 6px;
+        }
+    }
+
+    &__content {
+        border-collapse: collapse;
+        border: solid 0.125rem v.$color-gray_pale2;
+        width: 100%;
+    }
+
+    th,
+    td {
+        border: solid 0.0625rem v.$color-gray_pale2;
+    }
+
+    thead {
+        th {
+            background-color: v.$color-bg-gray_light;
+            padding: 16px;
+            line-height: 1;
+            color: v.$color-sub;
+
+            @include v.mq(pc) {
+                @include v.rem(18);
+            }
+
+            &:first-child {
+                width: 32%;
+            }
+        }
+    }
+
+    tbody {
+        th {
+            color: v.$color-blue;
+            text-wrap: nowrap;
+            padding: 0 0 10px;
+
+            @include v.mq(pc) {
+                @include v.rem(18);
+            }
+        }
+
+        td {
+            text-align: center;
+            padding: 10px 8px 12px;
+        }
+    }
+
+    &__description {
+        @include v.rem(14);
+        margin-bottom: 6px;
+        color: v.$color-sub;
+
+        @include v.mq(pc) {
+            @include v.rem(16);
+        }
+    }
+
+    &__amount {
+        @include v.rem(32);
+        color: v.$color-green;
+        line-height: 1;
+
+        @include v.mq(pc) {
+            @include v.rem(36);
+        }
+
+        &--poppins {
+            font-family: v.$font-point;
+        }
+    }
+
+    &__unit {
+        @include v.rem(14);
+
+        @include v.mq(pc) {
+            @include v.rem(16);
+        }
+    }
+
+    &__precautions {
+        @include v.rem(12);
+        text-align: center;
+        color: v.$color-gray_dark;
+        margin-top: 2px;
+
+        @include v.mq(pc) {
+            text-align: left;
+            margin-top: 4px;
+        }
+    }
+
+
+}
